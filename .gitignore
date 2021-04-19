@@ -40,6 +40,7 @@
 .vscode/
 .cmake/
 build/.cmake/
+build/.cmake-install/
 build/CMakeFiles/
 build/Debug/
 build/Release/
