@@ -4,8 +4,8 @@
 #include "../dialect.hpp"
 
 #if (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X)
-#	define noexcept
-#	define noexcept(arguments)
+#   define noexcept
+#   define noexcept(arguments)
 #endif // (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X)
 
 #endif // _CPP_COMPATIBILITY_KEYWORDS_NOEXCEPT_HPP_

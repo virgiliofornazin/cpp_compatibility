@@ -7,11 +7,11 @@
 
 namespace std
 {
-	template <typename Type>
-	constexpr Type* addressof(Type& value) noexcept
-	{
-		return &(value);
-	}
+    template <typename Type>
+    constexpr Type* addressof(Type& value) noexcept
+    {
+        return &(value);
+    }
 }
 
 #endif // (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X)
