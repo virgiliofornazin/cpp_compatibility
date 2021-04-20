@@ -1,5 +1,5 @@
-#ifndef _CPP_COMPATIBILITY_MUTEX_HPP_
-#define _CPP_COMPATIBILITY_MUTEX_HPP_
+#ifndef _CPP_COMPATIBILITY_RECURSIVE_TIMED_MUTEX_HPP_
+#define _CPP_COMPATIBILITY_RECURSIVE_TIMED_MUTEX_HPP_
 
 #include "prolog.hpp"
 
@@ -11,7 +11,7 @@
 
 #include "external_warnings_silence.hpp"
 
-#include <boost/thread/mutex.hpp>
+#include <boost/thread/recursive_timed_mutex.hpp>
 
 #include "external_warnings_reset.hpp"
 
@@ -20,9 +20,9 @@
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
-    typedef boost::mutex mutex;
+    typedef boost::recursive_timed_mutex recursive_timed_mutex;
 }
 
 #endif // (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
 
-#endif // _CPP_COMPATIBILITY_MUTEX_HPP_
+#endif // _CPP_COMPATIBILITY_RECURSIVE_TIMED_MUTEX_HPP_

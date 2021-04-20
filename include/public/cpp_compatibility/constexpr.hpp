@@ -1,10 +1,10 @@
-#ifndef _CPP_COMPATIBILITY_KEYWORDS_CONSTEXPR_HPP_
-#define _CPP_COMPATIBILITY_KEYWORDS_CONSTEXPR_HPP_
+#ifndef _CPP_COMPATIBILITY_CONSTEXPR_HPP_
+#define _CPP_COMPATIBILITY_CONSTEXPR_HPP_
 
-#include "../dialect.hpp"
+#include "dialect.hpp"
 
 #if !defined(__cpp_constexpr)
-#   define constexpr                                                            inline
+#   define constexpr                                                            const
 #endif // !defined(__cpp_constexpr)
 
 #define constexpr_11                                                            constexpr
@@ -16,20 +16,20 @@
 #if defined(__cpp_constexpr)
 #   if (__cpp_constexpr < 201907L)
 #       undef constexpr_20
-#       define constexpr_20                                                        inline
+#       define constexpr_20                                                     const
 #   elif (__cpp_constexpr < 201711L)
 #       undef constexpr_2a
-#       define constexpr_2a                                                        inline
+#       define constexpr_2a                                                     const
 #   elif (__cpp_constexpr < 201603L)
 #       undef constexpr_17
-#       define constexpr_17                                                        inline
+#       define constexpr_17                                                     const
 #   elif (__cpp_constexpr < 201304L)
 #       undef constexpr_14
-#       define constexpr_14                                                        inline
+#       define constexpr_14                                                     const
 #   elif (__cpp_constexpr < 200704L)
 #       undef constexpr_11
-#       define constexpr_11                                                        inline
+#       define constexpr_11                                                     const
 #   endif // (__cpp_constexpr < [VERSION]L)
 #endif // defined(__cpp_constexpr)
 
-#endif // _CPP_COMPATIBILITY_KEYWORDS_CONSTEXPR_HPP_
+#endif // _CPP_COMPATIBILITY_CONSTEXPR_HPP_

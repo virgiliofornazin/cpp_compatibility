@@ -1,28 +1,23 @@
-#ifndef _CPP_COMPATIBILITY_MUTEX_HPP_
-#define _CPP_COMPATIBILITY_MUTEX_HPP_
+#ifndef _CPP_COMPATIBILITY_THREAD_HPP_
+#define _CPP_COMPATIBILITY_THREAD_HPP_
 
 #include "prolog.hpp"
 
 #if (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
-#   include <mutex>
+#   include <thread>
 #endif // (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
 
 #if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
 
-#include "external_warnings_silence.hpp"
-
-#include <boost/thread/mutex.hpp>
-
-#include "external_warnings_reset.hpp"
-
-#include "lock_types.hpp"
-#include "unique_lock.hpp"
+#include <boost/thread.hpp>
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
-    typedef boost::mutex mutex;
+    namespace this_thread = boost::this_thread;
+
+    typedef boost::thread thread;
 }
 
 #endif // (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
 
-#endif // _CPP_COMPATIBILITY_MUTEX_HPP_
+#endif // _CPP_COMPATIBILITY_THREAD_HPP_
