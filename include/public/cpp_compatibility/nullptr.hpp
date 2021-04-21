@@ -3,8 +3,23 @@
 
 #include "dialect.hpp"
 
-#if (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X)
-#   define nullptr                                                              NULL
-#endif // (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X)
+#if (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
+#   include <type_traits>
+#endif // (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
+
+#if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
+
+#include "external_warnings_silence.hpp"
+
+#include <boost/type_traits.hpp>
+
+#include "external_warnings_reset.hpp"
+
+namespace CPP_COMPATIBILITY_NAMESPACE
+{
+    
+}
+
+#endif // (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
 
 #endif // _CPP_COMPATIBILITY_NULLPTR_HPP_

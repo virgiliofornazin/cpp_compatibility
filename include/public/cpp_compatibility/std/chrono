@@ -1,0 +1,6 @@
+#ifndef _CPP_COMPATIBILITY_CHRONO_
+#define _CPP_COMPATIBILITY_CHRONO_
+
+#include "../chrono.hpp"
+
+#endif // _CPP_COMPATIBILITY_CHRONO_

@@ -4,19 +4,22 @@
 #include "prolog.hpp"
 
 #if (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
+#   define CPP_COMPATIBILITY_NAMESPACE_TIMED_MUTEX                              std
 #   include <mutex>
 #endif // (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
 
 #if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
+#   ifndef CPP_COMPATIBILITY_NAMESPACE_TIMED_MUTEX
+#       define CPP_COMPATIBILITY_NAMESPACE_TIMED_MUTEX                          CPP_COMPATIBILITY_NAMESPACE
+#   endif // CPP_COMPATIBILITY_NAMESPACE_TIMED_MUTEX
 
-#include <boost/thread/mutex.hpp>
-
-#include "lock_types.hpp"
-#include "unique_lock.hpp"
+#   include "external_warnings_silence.hpp"
+#   include <boost/thread/mutex.hpp>
+#   include "external_warnings_reset.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
-    typedef boost::timed_mutex timed_mutex;
+    using boost::timed_mutex;
 }
 
 #endif // (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))

@@ -4,23 +4,22 @@
 #include "prolog.hpp"
 
 #if (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
+#   define CPP_COMPATIBILITY_NAMESPACE_RECURSIVE_TIMED_MUTEX                    std
 #   include <mutex>
 #endif // (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
 
 #if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
+#   ifndef CPP_COMPATIBILITY_NAMESPACE_RECURSIVE_TIMED_MUTEX
+#       define CPP_COMPATIBILITY_NAMESPACE_RECURSIVE_TIMED_MUTEX                CPP_COMPATIBILITY_NAMESPACE
+#   endif // CPP_COMPATIBILITY_NAMESPACE_RECURSIVE_TIMED_MUTEX
 
-#include "external_warnings_silence.hpp"
-
-#include <boost/thread/recursive_timed_mutex.hpp>
-
-#include "external_warnings_reset.hpp"
-
-#include "lock_types.hpp"
-#include "unique_lock.hpp"
+#   include "external_warnings_silence.hpp"
+#   include <boost/thread/recursive_mutex.hpp>
+#   include "external_warnings_reset.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
-    typedef boost::recursive_timed_mutex recursive_timed_mutex;
+    using boost::recursive_timed_mutex;
 }
 
 #endif // (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))

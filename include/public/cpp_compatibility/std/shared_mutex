@@ -1,0 +1,8 @@
+#ifndef _CPP_COMPATIBILITY_SHARED_MUTEX_
+#define _CPP_COMPATIBILITY_SHARED_MUTEX_
+
+#include "../shared_timed_mutex.hpp"
+#include "../shared_mutex.hpp"
+#include "../shared_lock.hpp"
+
+#endif // _CPP_COMPATIBILITY_SHARED_MUTEX_

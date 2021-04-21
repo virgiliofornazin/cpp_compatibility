@@ -3,26 +3,28 @@
 
 #include "prolog.hpp"
 
-#if (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_1Y)
+#if (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
+#   define CPP_COMPATIBILITY_NAMESPACE_SHARED_TIMED_MUTEX                       std
 #   include <shared_mutex>
-#endif // (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_1Y)
+#endif // (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
 
-#if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_1Y))
+#if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
+#   ifndef CPP_COMPATIBILITY_NAMESPACE_SHARED_TIMED_MUTEX
+#       define CPP_COMPATIBILITY_NAMESPACE_SHARED_TIMED_MUTEX                   CPP_COMPATIBILITY_NAMESPACE
+#   endif // CPP_COMPATIBILITY_NAMESPACE_SHARED_TIMED_MUTEX
 
-#include "external_warnings_silence.hpp"
+#   include "external_warnings_silence.hpp"
+#   include <boost/thread/shared_mutex.hpp>
+#   include "external_warnings_reset.hpp"
 
-#include <boost/thread/shared_mutex.hpp>
-
-#include "external_warnings_reset.hpp"
-
-#include "lock_types.hpp"
-#include "unique_lock.hpp"
+#   include "lock_types.hpp"
+#   include "unique_lock.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
-    typedef boost::shared_timed_mutex shared_timed_mutex;
+    using boost::shared_timed_mutex;
 }
 
-#endif // (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_1Y))
+#endif // (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
 
 #endif // _CPP_COMPATIBILITY_SHARED_TIMED_MUTEX_HPP_

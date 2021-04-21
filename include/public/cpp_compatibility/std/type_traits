@@ -1,0 +1,6 @@
+#ifndef _CPP_COMPATIBILITY_TYPE_TRAITS_
+#define _CPP_COMPATIBILITY_TYPE_TRAITS_
+
+#include "../type_traits.hpp"
+
+#endif // _CPP_COMPATIBILITY_TYPE_TRAITS_

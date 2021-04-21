@@ -1,0 +1,14 @@
+#ifndef _CPP_COMPATIBILITY_MEMORY_
+#define _CPP_COMPATIBILITY_MEMORY_
+
+    #include "../addressof.hpp"
+    #include "../swap.hpp"
+    #include "../shared_ptr.hpp"
+    #include "../weak_ptr.hpp"
+    #include "../enable_shared_from_this.hpp"
+    #include "../unique_ptr.hpp"
+    #include "../owner_less.hpp"
+    #include "../make_shared.hpp"
+    #include "../make_unique.hpp"
+
+#endif // _CPP_COMPATIBILITY_MEMORY_

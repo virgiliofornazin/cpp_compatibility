@@ -1,0 +1,6 @@
+#ifndef _CPP_COMPATIBILITY_RATIO_
+#define _CPP_COMPATIBILITY_RATIO_
+
+#include "../ratio.hpp"
+
+#endif // _CPP_COMPATIBILITY_RATIO_
