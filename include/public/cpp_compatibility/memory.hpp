@@ -14,6 +14,7 @@
 #   endif // CPP_COMPATIBILITY_NAMESPACE_MEMORY
 
 #   include "external_warnings_silence.hpp"
+#   include "windows_sdk_headers.hpp"
 #   include <boost/core/addressof.hpp>
 #   include <boost/smart_ptr/shared_ptr.hpp>
 #   include <boost/smart_ptr/weak_ptr.hpp>

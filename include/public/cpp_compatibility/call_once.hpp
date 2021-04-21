@@ -14,6 +14,7 @@
 #   endif // CPP_COMPATIBILITY_NAMESPACE_CALL_ONCE
 
 #   include "external_warnings_silence.hpp"
+#   include "windows_sdk_headers.hpp"
 #   include <boost/thread/once.hpp>
 #   include "external_warnings_reset.hpp"
 

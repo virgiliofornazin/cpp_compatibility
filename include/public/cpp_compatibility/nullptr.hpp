@@ -10,9 +10,8 @@
 #if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
 
 #include "external_warnings_silence.hpp"
-
+#   include "windows_sdk_headers.hpp"
 #include <boost/type_traits.hpp>
-
 #include "external_warnings_reset.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE

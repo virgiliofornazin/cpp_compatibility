@@ -2,6 +2,7 @@
 #define _CPP_COMPATIBILITY_MUTEX_
 
 #include "../mutex.hpp"
+/*
 #include "../timed_mutex.hpp"
 #include "../recursive_mutex.hpp"
 #include "../recursive_timed_mutex.hpp"
@@ -18,6 +19,7 @@
 #include "../try_lock.hpp"
 #include "../lock.hpp"
 #include "../call_once.hpp"
-    #include "../swap_unique_ptr.hpp"
+#include "../swap_unique_lock.hpp"
+*/
 
 #endif // _CPP_COMPATIBILITY_MUTEX_

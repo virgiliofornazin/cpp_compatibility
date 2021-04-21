@@ -14,6 +14,7 @@
 #   endif // CPP_COMPATIBILITY_NAMESPACE_ADOPT_LOCK
 
 #   include "external_warnings_silence.hpp"
+#   include "windows_sdk_headers.hpp"
 #   include <boost/thread/lock_types.hpp>
 #   include "external_warnings_reset.hpp"
 

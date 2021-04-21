@@ -1,0 +1,6 @@
+#ifndef _CPP_COMPATIBILITY_ALGORITHM_
+#define _CPP_COMPATIBILITY_ALGORITHM_
+
+#include "../swap.hpp"
+
+#endif // _CPP_COMPATIBILITY_ALGORITHM_

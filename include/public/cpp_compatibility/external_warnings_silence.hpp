@@ -3,7 +3,7 @@
 
 #ifdef _MSC_VER
 #   pragma warning(push)
-#   pragma warning(disable: 4061 4280 4365 4371 4514 4619 4625 4626 4643 4668 4710 4820 5026 5027 5031 5039 5104 5105 5204 5219)
+#   pragma warning(disable: 5104 5105)
 #endif // _MSC_VER
 
 #endif // _CPP_EXTENSIONS_EXTERNAL_WARNINGS_SILENCE_HPP_
