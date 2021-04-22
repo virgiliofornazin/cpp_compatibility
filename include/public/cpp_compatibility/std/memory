@@ -1,6 +1,8 @@
 #ifndef _CPP_COMPATIBILITY_MEMORY_
 #define _CPP_COMPATIBILITY_MEMORY_
 
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
 #include "../addressof.hpp"
 /*
 #include "../shared_ptr.hpp"

@@ -1,6 +1,8 @@
 #ifndef _CPP_COMPATIBILITY_SHARED_MUTEX_
 #define _CPP_COMPATIBILITY_SHARED_MUTEX_
 
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
 #include "../shared_timed_mutex.hpp"
 #include "../shared_mutex.hpp"
 #include "../shared_lock.hpp"

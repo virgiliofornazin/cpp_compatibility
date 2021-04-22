@@ -1,6 +1,8 @@
 #ifndef _CPP_COMPATIBILITY_RATIO_
 #define _CPP_COMPATIBILITY_RATIO_
 
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
 #include "../ratio.hpp"
 
 #endif // _CPP_COMPATIBILITY_RATIO_
