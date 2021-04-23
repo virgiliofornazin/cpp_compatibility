@@ -1,7 +1,7 @@
 #ifndef _CPP_COMPATIBILITY_NOEXCEPT_HPP_
 #define _CPP_COMPATIBILITY_NOEXCEPT_HPP_
 
-#include "dialect.hpp"
+#include "prolog.hpp"
 
 #if (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X)
 #   define noexcept

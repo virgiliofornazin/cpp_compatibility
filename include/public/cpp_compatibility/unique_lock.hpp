@@ -24,6 +24,7 @@
 #   include "try_to_lock.hpp"
 #   include "defer_lock_t.hpp"
 #   include "defer_lock.hpp"
+#   include "chrono.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {

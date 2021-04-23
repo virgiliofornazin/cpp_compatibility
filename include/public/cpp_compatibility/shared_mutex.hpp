@@ -18,9 +18,6 @@
 #   include <boost/thread/shared_mutex.hpp>
 #   include "external_warnings_reset.hpp"
 
-#   include "lock_types.hpp"
-#   include "unique_lock.hpp"
-
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
     using boost::shared_mutex;

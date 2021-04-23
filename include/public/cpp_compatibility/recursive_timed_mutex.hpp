@@ -18,6 +18,8 @@
 #   include <boost/thread/recursive_mutex.hpp>
 #   include "external_warnings_reset.hpp"
 
+#   include "chrono.hpp"
+
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
     using boost::recursive_timed_mutex;

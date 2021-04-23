@@ -18,6 +18,8 @@
 #   include <boost/thread/mutex.hpp>
 #   include "external_warnings_reset.hpp"
 
+#   include "chrono.hpp"
+
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
     using boost::timed_mutex;

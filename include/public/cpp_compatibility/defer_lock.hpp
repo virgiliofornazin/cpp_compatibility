@@ -18,6 +18,8 @@
 #   include <boost/thread/lock_types.hpp>
 #   include "external_warnings_reset.hpp"
 
+#   include "defer_lock_t.hpp"
+
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
     using boost::defer_lock;

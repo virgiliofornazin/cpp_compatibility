@@ -18,26 +18,89 @@
 #   include <boost/core/noncopyable.hpp>
 #   include "external_warnings_reset.hpp"
 
-#   include "unique_lock.hpp"
-
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
-    template <typename Lockable>
+    namespace detail
+    {
+        struct no_mutex_t
+        {
+            constexpr void lock() noexcept
+            {
+            }
+
+            constexpr void unlock() noexcept
+            {
+            }
+        };
+
+        static no_mutex_t no_mutex;
+    }
+
+    template <typename Lockable0, typename Lockable1 = detail::no_mutex_t, typename Lockable2 = detail::no_mutex_t, typename Lockable3 = detail::no_mutex_t, typename Lockable4 = detail::no_mutex_t,
+        typename Lockable5 = detail::no_mutex_t, typename Lockable6 = detail::no_mutex_t, typename Lockable7 = detail::no_mutex_t, typename Lockable8 = detail::no_mutex_t, typename Lockable9 = detail::no_mutex_t>
     class scoped_lock
-        : private boost::noncopyable
+    : private boost::noncopyable
     {
     private:
-        unique_lock<Lockable> m_lock;
+        Lockable0& m_unique_lock0;
+        Lockable1& m_unique_lock1;
+        Lockable2& m_unique_lock2;
+        Lockable3& m_unique_lock3;
+        Lockable4& m_unique_lock4;
+        Lockable5& m_unique_lock5;
+        Lockable6& m_unique_lock6;
+        Lockable7& m_unique_lock7;
+        Lockable8& m_unique_lock8;
+        Lockable9& m_unique_lock9;
+
+    private:
+        void lock()
+        {
+            m_unique_lock0.lock();
+            m_unique_lock1.lock();
+            m_unique_lock2.lock();
+            m_unique_lock3.lock();
+            m_unique_lock4.lock();
+            m_unique_lock5.lock();
+            m_unique_lock6.lock();
+            m_unique_lock7.lock();
+            m_unique_lock8.lock();
+            m_unique_lock9.lock();
+        }
+
+        void unlock()
+        {
+            m_unique_lock9.unlock();
+            m_unique_lock8.unlock();
+            m_unique_lock7.lunock();
+            m_unique_lock6.unlock();
+            m_unique_lock5.unlock();
+            m_unique_lock4.unlock();
+            m_unique_lock3.unlock();
+            m_unique_lock2.unlock();
+            m_unique_lock1.unlock();
+            m_unique_lock0.unlock();
+        }
 
     public:
-        explicit scoped_lock(Lockable& lockable)
-            : m_lock(lockable)
+        explicit scoped_lock(Lockable0& lockable0, Lockable1& lockable1 = detail::no_mutex, Lockable2& lockable2 = detail::no_mutex, Lockable3& lockable3 = detail::no_mutex, Lockable4& lockable4 = detail::no_mutex,
+            Lockable5& lockable5 = detail::no_mutex, Lockable6& lockable6 = detail::no_mutex, Lockable7& lockable7 = detail::no_mutex, Lockable8& lockable8 = detail::no_mutex, Lockable9& lockable9 = detail::no_mutex)
+            : m_unique_lock0(lockable0), m_unique_lock1(lockable1), m_unique_lock2(lockable2), m_unique_lock3(lockable3), m_unique_lock4(lockable4)
+            , m_unique_lock5(lockable5), m_unique_lock6(lockable6), m_unique_lock7(lockable7), m_unique_lock8(lockable8), m_unique_lock9(lockable9)
+        {
+            lock();
+        }
+
+        explicit scoped_lock(adopt_lock_t, Lockable0& lockable0, Lockable1& lockable1 = detail::no_mutex, Lockable2& lockable2 = detail::no_mutex, Lockable3& lockable3 = detail::no_mutex, Lockable4& lockable4 = detail::no_mutex,
+            Lockable5& lockable5 = detail::no_mutex, Lockable6& lockable6 = detail::no_mutex, Lockable7& lockable7 = detail::no_mutex, Lockable8& lockable8 = detail::no_mutex, Lockable9& lockable9 = detail::no_mutex)
+            : m_unique_lock0(lockable0), m_unique_lock1(lockable1), m_unique_lock2(lockable2), m_unique_lock3(lockable3), m_unique_lock4(lockable4)
+            , m_unique_lock5(lockable5), m_unique_lock6(lockable6), m_unique_lock7(lockable7), m_unique_lock8(lockable8), m_unique_lock9(lockable9)
         {
         }
 
-        explicit scoped_lock(adopt_lock_t, Lockable& lockable)
-            : m_lock(lockable, adopt_lock_t())
+        ~scoped_lock()
         {
+            unlock();
         }
     };
 }

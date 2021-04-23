@@ -3,8 +3,8 @@
 
 #define CPP_COMPATIBILITY_STD_NAMESPACE
 
-#include "../shared_timed_mutex.hpp"
 #include "../shared_mutex.hpp"
+#include "../shared_timed_mutex.hpp"
 #include "../shared_lock.hpp"
 
 #endif // _CPP_COMPATIBILITY_SHARED_MUTEX_

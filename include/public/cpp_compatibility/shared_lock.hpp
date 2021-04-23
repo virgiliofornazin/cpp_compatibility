@@ -18,9 +18,13 @@
 #   include <boost/thread/locks.hpp>
 #   include "external_warnings_reset.hpp"
 
+#   include "adopt_lock_t.hpp"
 #   include "adopt_lock.hpp"
+#   include "try_to_lock_t.hpp"
 #   include "try_to_lock.hpp"
+#   include "defer_lock_t.hpp"
 #   include "defer_lock.hpp"
+#   include "chrono.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {

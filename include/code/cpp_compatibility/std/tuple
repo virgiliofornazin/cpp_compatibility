@@ -3,6 +3,7 @@
 
 #define CPP_COMPATIBILITY_STD_NAMESPACE
 
-#include "../string_view.hpp"
+#include "../tuple.hpp"
+#include "../make_tuple.hpp"
 
 #endif // _CPP_COMPATIBILITY_TYPE_TRAITS_

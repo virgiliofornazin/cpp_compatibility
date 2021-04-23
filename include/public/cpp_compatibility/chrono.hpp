@@ -4,20 +4,26 @@
 #include "prolog.hpp"
 
 #if (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
+#   define CPP_COMPATIBILITY_NAMESPACE_CHRONO                                   std
 #   include <chrono>
 #endif // (CPP_COMPATIBILITY_DIALECT >= CPP_COMPATIBILITY_DIALECT_0X)
 
 #if (defined(CPP_COMPATIBILITY_NO_STD_NAMESPACE) || (CPP_COMPATIBILITY_DIALECT < CPP_COMPATIBILITY_DIALECT_0X))
+#   ifndef CPP_COMPATIBILITY_NAMESPACE_CHRONO
+#       define CPP_COMPATIBILITY_NAMESPACE_CHRONO                               CPP_COMPATIBILITY_NAMESPACE
+#   endif // CPP_COMPATIBILITY_NAMESPACE_CHRONO
 
-#include "external_warnings_silence.hpp"
+#   include "external_warnings_silence.hpp"
 #   include "windows_sdk_headers.hpp"
-#include <boost/chrono.hpp>
-#include "external_warnings_reset.hpp"
+#   include <boost/chrono.hpp>
+#   include "external_warnings_reset.hpp"
 
-#include "ratio.hpp"
+#   include "ratio.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
+    namespace chrono = boost::chrono;
+
     namespace detail
     {
         template <typename Type>

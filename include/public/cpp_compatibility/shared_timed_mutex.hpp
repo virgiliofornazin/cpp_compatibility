@@ -18,8 +18,7 @@
 #   include <boost/thread/shared_mutex.hpp>
 #   include "external_warnings_reset.hpp"
 
-#   include "lock_types.hpp"
-#   include "unique_lock.hpp"
+#   include "chrono.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {

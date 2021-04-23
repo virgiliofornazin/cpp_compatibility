@@ -17,14 +17,15 @@
 #   include "windows_sdk_headers.hpp"
 #   include <boost/utility/string_view.hpp>
 #   include "external_warnings_reset.hpp"
+
 #   include "hash.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
-    using boost::detail::basic_string_view;
+    using boost::basic_string_view;
     using boost::string_view;
     using boost::wstring_view;
-    using boost::u8string_view;
+    typedef boost::string_view u8string_view;
     using boost::u16string_view;
     using boost::u32string_view;
 }

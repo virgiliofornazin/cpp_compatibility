@@ -1,6 +1,8 @@
 #ifndef _CPP_COMPATIBILITY_WINDOWS_SDK_HEADERS_HPP_
 #define _CPP_COMPATIBILITY_WINDOWS_SDK_HEADERS_HPP_
 
+#include "prolog.hpp"
+
 #if (defined(_WIN32) || defined(WIN32))
 #   include <ws2tcpip.h>
 #   include <windows.h>

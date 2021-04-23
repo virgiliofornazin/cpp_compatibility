@@ -18,6 +18,8 @@
 #   include <boost/thread/once.hpp>
 #   include "external_warnings_reset.hpp"
 
+#   include "once_flag.hpp"
+
 namespace CPP_COMPATIBILITY_NAMESPACE
 {
     using boost::call_once;
