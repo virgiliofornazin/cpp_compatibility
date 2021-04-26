@@ -1,0 +1,9 @@
+#ifndef _CPP_COMPATIBILITY_THREAD_
+#define _CPP_COMPATIBILITY_THREAD_
+
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
+#include "../thread.hpp"
+#include "../jthread.hpp"
+
+#endif // _CPP_COMPATIBILITY_THREAD_

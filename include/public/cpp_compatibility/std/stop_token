@@ -1,0 +1,12 @@
+#ifndef _CPP_COMPATIBILITY_STOP_TOKEN_
+#define _CPP_COMPATIBILITY_STOP_TOKEN_
+
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
+#include "../stop_token.hpp"
+#include "../stop_source.hpp"
+#include "../stop_callback.hpp"
+#include "../nostopstate_t.hpp"
+#include "../nostopstate.hpp"
+
+#endif // _CPP_COMPATIBILITY_STOP_TOKEN_

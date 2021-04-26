@@ -1,0 +1,39 @@
+#ifndef _CPP_COMPATIBILITY_FUNCTIONAL_
+#define _CPP_COMPATIBILITY_FUNCTIONAL_
+
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
+#include "../placeholders.hpp"
+#include "../function.hpp"
+#include "../mem_fn.hpp"
+#include "../bad_function_call.hpp"
+#include "../is_bind_expression.hpp"
+#include "../is_placeholder.hpp"
+#include "../reference_wrapper.hpp"
+#include "../hash.hpp"
+/* TODO: implement bind_front in C++03 mode
+#include "../bind_front.hpp" */
+#include "../bind.hpp"
+#include "../ref.hpp"
+#include "../cref.hpp"
+#include "../invoke.hpp"
+// TODO: needs a C++03 compatible rangeV3/C++20 implementation
+// #include "../ranges_equal_to.hpp"
+// #include "../ranges_not_equal_to.hpp"
+// #include "../ranges_greater.hpp"
+// #include "../ranges_less.hpp"
+// #include "../ranges_greater_equal.hpp"
+// #include "../ranges_less_equal.hpp"
+#include "../bit_not.hpp"
+// TODO: variadc version supporting invoke
+// #include "../not_fn.hpp"
+
+
+
+/*
+#include "../default_searcher.hpp"
+#include "../boyer_moore_searcher.hpp"
+#include "../boyer_moore_horspool_searcher.hpp"
+*/
+
+#endif // _CPP_COMPATIBILITY_FUNCTIONAL_
