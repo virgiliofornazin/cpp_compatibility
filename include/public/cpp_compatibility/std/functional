@@ -11,8 +11,8 @@
 #include "../is_placeholder.hpp"
 #include "../reference_wrapper.hpp"
 #include "../hash.hpp"
-/* TODO: implement bind_front in C++03 mode
-#include "../bind_front.hpp" */
+// TODO: implement bind_front in C++03 mode
+// #include "../bind_front.hpp"
 #include "../bind.hpp"
 #include "../ref.hpp"
 #include "../cref.hpp"
@@ -25,15 +25,11 @@
 // #include "../ranges_greater_equal.hpp"
 // #include "../ranges_less_equal.hpp"
 #include "../bit_not.hpp"
-// TODO: variadc version supporting invoke
+// TODO: variadic version supporting std::invoke
 // #include "../not_fn.hpp"
-
-
-
-/*
-#include "../default_searcher.hpp"
-#include "../boyer_moore_searcher.hpp"
-#include "../boyer_moore_horspool_searcher.hpp"
-*/
+// TODO: implement with boost
+// #include "../default_searcher.hpp"
+// #include "../boyer_moore_searcher.hpp"
+// #include "../boyer_moore_horspool_searcher.hpp"
 
 #endif // _CPP_COMPATIBILITY_FUNCTIONAL_

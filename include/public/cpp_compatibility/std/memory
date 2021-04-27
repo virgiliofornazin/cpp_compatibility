@@ -1,0 +1,91 @@
+#ifndef _CPP_COMPATIBILITY_MEMORY_
+#define _CPP_COMPATIBILITY_MEMORY_
+
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
+// pointer_traits
+// pointer_safety
+// allocator_traits
+// allocator_arg_t
+// allocator_arg
+// uses_allocator
+// atomic_shared_ptr
+// atomic_weak_ptr
+#include "../unique_ptr.hpp"
+#include "../shared_ptr.hpp"
+#include "../weak_ptr.hpp"
+// atomic_shared_ptr
+// atomic_weak_ptr
+#include "../owner_less.hpp"
+#include "../enable_shared_from_this.hpp"
+// bad_weak_ptr
+// default_delete
+// hash_unique_ptr
+// hash_shared_ptr
+/*
+#include "../to_address.hpp"
+template<class T>
+constexpr T* to_address(T* p) noexcept
+{
+    static_assert(!std::is_function_v<T>);
+    return p;
+}
+
+template<class T>
+constexpr auto to_address(const T& p) noexcept
+{
+    if constexpr (requires{ std::pointer_traits<T>::to_address(p); }) {
+        return std::pointer_traits<T>::to_address(p);
+    } else {
+        return std::to_address(p.operator->());
+    }
+}
+*/
+#include "../addressof.hpp"
+// align
+// assume_aligned
+// declare_reachable
+// undeclare_reachable
+// declare_no_poionters
+// undeclare_no_poionters
+// get_pointer_safery
+// uninitialized_copy_n
+// uninitialized_move
+// uninitialized_move_n
+// uninitialized_default_construct
+// uninitialized_default_construct_n
+// uninitialized_value_construct
+// uninitialized_value_construct_n
+// conmstruct_at
+// destroy_at
+// destroy
+// destroy_n
+#include "../make_unique.hpp"
+// #include "../make_unique_for_overwrite.hpp"
+#include "../make_shared.hpp"
+// #include "../make_shared_for_overwrite.hpp"
+#include "../allocate_shared.hpp"
+// #include "../allocate_shared_for_overwrite.hpp"
+// #include "../get_deleter.hpp"
+#include "../swap_unique_ptr.hpp"
+#include "../swap_weak_ptr.hpp"
+#include "../swap_shared_ptr.hpp"
+// TODO: implement
+// atomic_shared_ptr_functions.hpp
+// TODO: needs a C++03 range compartible with C++20
+// range_uninitialized_copy
+// range_uninitialized_copy_n
+// range_uninitialized_fill
+// range_uninitialized_fill_n
+// range_uninitialized_move
+// range_uninitialized_move_n
+// range_uninitialized_default_construct
+// range_uninitialized_default_construct_n
+// range_uninitialized_value_construct
+// range_uninitialized_value_construct_n
+// range_conmstruct_at
+// range_destroy_at
+// range_destroy
+// range_destroy_n
+
+#endif // _CPP_COMPATIBILITY_MEMORY_

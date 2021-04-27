@@ -15,7 +15,7 @@
 
 #   include "thread.hpp"
 #   include "stop_source.hpp"
-#   include "stop_token.hpp""
+#   include "stop_token.hpp"
 
 namespace CPP_COMPATIBILITY_NAMESPACE
 {

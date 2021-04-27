@@ -1,9 +1,9 @@
-#ifndef _CPP_COMPATIBILITY_TYPE_TRAITS_
-#define _CPP_COMPATIBILITY_TYPE_TRAITS_
+#ifndef _CPP_COMPATIBILITY_TUPLE_
+#define _CPP_COMPATIBILITY_TUPLE_
 
 #define CPP_COMPATIBILITY_STD_NAMESPACE
 
 #include "../tuple.hpp"
 #include "../make_tuple.hpp"
 
-#endif // _CPP_COMPATIBILITY_TYPE_TRAITS_
+#endif // _CPP_COMPATIBILITY_TUPLE_

@@ -1,0 +1,9 @@
+#ifndef _CPP_COMPATIBILITY_TYPEINDEX_
+#define _CPP_COMPATIBILITY_TYPEINDEX_
+
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
+#include "../type_index.hpp"
+#include "../hash_type_index.hpp"
+
+#endif // _CPP_COMPATIBILITY_TYPEINDEX_
