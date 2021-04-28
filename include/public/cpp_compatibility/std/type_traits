@@ -1,0 +1,9 @@
+#ifndef _CPP_COMPATIBILITY_TYPE_TRAITS_
+#define _CPP_COMPATIBILITY_TYPE_TRAITS_
+
+#define CPP_COMPATIBILITY_STD_NAMESPACE
+
+#include "../integral_constant.hpp"
+#include "../bool_constant.hpp"
+
+#endif // _CPP_COMPATIBILITY_TYPE_TRAITS_
